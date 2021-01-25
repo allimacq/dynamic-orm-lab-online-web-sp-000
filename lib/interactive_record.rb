@@ -60,7 +60,7 @@ class InteractiveRecord
     p column_names
     self.column_names.collect do |col_name|
       if col_name == attribute_key
-        attribute_key
+        p attribute_key
       end
     end
     

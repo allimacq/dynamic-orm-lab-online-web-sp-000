@@ -56,6 +56,6 @@ class InteractiveRecord
   
   def self.find_by(attributes = {})
     p attributes
-    sql = "SELECT * FROM #{self.table_name} WHERE #{(keys attributes} = "
+    sql = "SELECT * FROM #{self.table_name} WHERE #{(keys attributes} = ?"
   end
 end

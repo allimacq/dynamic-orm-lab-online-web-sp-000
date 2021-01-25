@@ -64,7 +64,7 @@ class InteractiveRecord
       end
     end
     
-    p column_names
+    p attribute_key
     sql = "SELECT * FROM #{self.table_name} WHERE #{self.column_names} = #{attributes.keys[0].to_s}"
     DB[:conn].execute(sql)
   end

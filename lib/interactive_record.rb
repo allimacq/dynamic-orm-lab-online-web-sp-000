@@ -56,8 +56,8 @@ class InteractiveRecord
   
   def self.find_by(attributes = {})
     attribute_key = attributes.keys[0]
-    p attributes.values[0]
-    
+    #p attributes.values[0]
+    p column_names
     self.column_names.collect do |col_name|
       if col_name == attribute_key
         attribute_key

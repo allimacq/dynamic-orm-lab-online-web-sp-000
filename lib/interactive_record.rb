@@ -57,14 +57,6 @@ class InteractiveRecord
   def self.find_by(attributes = {})
     attribute_key = attributes.keys[0]
     #p attributes.values[0]
-    p column_names
-    self.column_names.collect do |col_name|
-      if col_name == attribute_key
-        p attribute_key
-      end
-    end
-    
-    p attribute_key
     sql = "SELECT * FROM #{self.table_name} WHERE #{self.column_names} = #{attributes.keys[0].to_s}"
     DB[:conn].execute(sql)
   end
